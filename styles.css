@@ -1,76 +1,181 @@
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+    min-height: 420px;
+
+    background-image: url("DJI_0202.JPG");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
 }
 
-/* HERO */
-.hero {
-  padding: 4rem 1rem;
-  text-align: center;
-  background: linear-gradient(
-    135deg,
-    var(--bg-dark),
-    var(--bg-section)
-  );
+    .hero .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 1.5rem;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 1.5rem;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ===== MISSION SECTION ===== */
+    .mission {
+      background-color: rgb(30, 41, 59); /* medium blue-gray */
+      color: rgb(148, 163, 184); /* gray text */
+      padding: 3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: center;
+   
 }
 
-.avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  border: 3px solid var(--accent-cyan);
-  margin-bottom: 1rem;
-}
+    .mission-content {
+      max-width: 520px;
+      margin-left: 3rem;
+    }
 
-.hero h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    .mission-content p {
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    } 
 
-.tagline {
-  color: var(--accent-cyan-soft);
-  margin-top: 0.5rem;
-}
 
-/* MISSION */
-.mission {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background-color: var(--bg-section);
-}
+    .mission img {
+      width: 100%;
+      border-radius: 12px;
+    }
 
-.mission img {
-  width: 100%;
-  border-radius: 12px;
-}
+    .mission h2 {
+      color: rgb(226, 232, 240); /* lighter gray for heading */
+      margin-bottom: 0.75rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
 
-.mission h2 {
-  color: var(--accent-cyan);
-}
+    /* ===== SKILLS SECTION ===== */
+    .skills {
+      background-color: rgb(34, 211, 238); /* cyan */
+      padding: 3rem 2rem;
+      text-align: center;
+      color: rgb(15, 23, 42);
+    }
 
-/* SKILLS */
-.skills {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: var(--bg-dark);
-}
+    .skills h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
 
-.skill-tags {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-}
+    .skill-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
-.skill-tags span {
-  background-color: var(--bg-card);
-  color: var(--accent-cyan-soft);
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-}
+    .skill-tags span {
+      background-color: rgba(15, 23, 42, 0.1);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* ===== SKILL BUTTONS ===== */
+    .skill-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .btn:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      opacity: 0.85;
+    }
+
+    .btn-square {
+      width: 80px;
+      height: 80px;
+      background-color: rgb(59, 130, 246);
+      border-radius: 8px;
+    }
+
+    .btn-rectangle {
+      width: 120px;
+      height: 70px;
+      background-color: rgb(168, 85, 247);
+      border-radius: 8px;
+    }
+
+    .btn-circle {
+      width: 80px;
+      height: 80px;
+      background-color: rgb(236, 72, 153);
+      border-radius: 50%;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .mission {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
